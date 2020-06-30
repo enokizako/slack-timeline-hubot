@@ -16,7 +16,7 @@ module.exports = (robot) ->
         display_name = robot.brain.data.users[user_id].slack.profile.display_name
         user_image = msg.message.user.slack.profile.image_48
         # roomの指定で、 投稿するchannelを指定
-        robot.send({room: "#newbies"}, {
+        robot.send({room: "#timeline"}, {
               as_user: false,
               username: "#{display_name}(BOT)",
               icon_url: "#{user_image}",
